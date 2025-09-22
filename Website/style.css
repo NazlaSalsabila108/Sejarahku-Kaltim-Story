@@ -1,0 +1,185 @@
+/* style.css */
+
+/* Reset dan font dasar */
+body, h1, h2, h3, p, ul, li, form, input, button, textarea {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: #f6f8fa;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header dan navigasi */
+header {
+    background: #1e293b;
+    color: #fff;
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 0;
+    list-style: none;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.navbar a:hover {
+    color: #38bdf8;
+}
+
+/* Auth section */
+.user-auth, .register-section {
+    background: #fff;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(30,41,59,0.08);
+    max-width: 400px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+input[type="text"], input[type="password"], textarea {
+    padding: 0.5rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+button {
+    background: #38bdf8;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #0ea5e9;
+}
+
+/* Main layout */
+main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+@media (max-width: 900px) {
+    main {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+}
+
+/* Section styling */
+section {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(30,41,59,0.08);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    color: #0ea5e9;
+    margin-bottom: 1rem;
+}
+
+article {
+    margin-bottom: 2rem;
+}
+
+article h3 {
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+    background: #1e293b;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem 1rem 1rem;
+    margin-top: auto;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+footer a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive form */
+@media (max-width: 600px) {
+    .user-auth, .register-section, section {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+    header {
+        padding: 1rem 0 0.5rem 0;
+    }
+    footer {
+        padding: 1rem 0.5rem;
+    }
+}
+
+/* Reusable utility classes */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+@media (max-width: 700px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
